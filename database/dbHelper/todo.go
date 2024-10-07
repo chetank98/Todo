@@ -5,6 +5,8 @@ import (
 	"Todo/models"
 )
 
+// One User can have same of todos but because of this it can hinderance in creating the app
+
 // IsTodoExists checks if a todo with a given name exists for the specified user.
 func IsTodoExists(name, userID string) (bool, error) {
 	query := `SELECT count(id) > 0 as is_exist
